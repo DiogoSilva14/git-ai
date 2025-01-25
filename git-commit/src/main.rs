@@ -6,8 +6,9 @@ use ollama_rs::{generation::completion::request::GenerationRequest, Ollama};
 use std::{env, fs, io::stdin, process::Command};
 
 const PROMPT: &str = r#"
-Create the commit message for this diff. Make it one-line.
-Do not output anything beside the commit message.
+The text above is a diff from a git commit, but it needs a commit message.
+Write an appropriate commit message for the piece of code given above.
+Make it a one-liner and do not output anything beside the commit message.
 
 
 "#;
